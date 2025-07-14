@@ -66,7 +66,7 @@ let TransactionsService = class TransactionsService {
                 await transactionEntityManager.save(transactionContent);
             }
         });
-        return "Venta almacenada correctamente";
+        return { message: "Venta almacenada Correctamente" };
     }
     findAll(transactionDate) {
         const options = {

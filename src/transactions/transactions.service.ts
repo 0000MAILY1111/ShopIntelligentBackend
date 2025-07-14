@@ -60,7 +60,7 @@ export class TransactionsService {
         await transactionEntityManager.save(transactionContent);
       }
     })
-    return "Venta almacenada correctamente";
+    return { message : "Venta almacenada Correctamente" }       
   }
 
   ///contents , es donde se relaciona los datos es como hacer el Join en SQL

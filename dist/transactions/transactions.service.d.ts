@@ -10,7 +10,9 @@ export declare class TransactionsService {
     private readonly productRepository;
     private readonly cuponsService;
     constructor(transactionRepository: Repository<Transaction>, transactionContentsRepository: Repository<TransactionContents>, productRepository: Repository<Product>, cuponsService: CuponsService);
-    create(createTransactionDto: CreateTransactionDto): Promise<string>;
+    create(createTransactionDto: CreateTransactionDto): Promise<{
+        message: string;
+    }>;
     findAll(transactionDate?: string): Promise<Transaction[]>;
     findOne(id: number): Promise<Transaction>;
     remove(id: number): Promise<{
