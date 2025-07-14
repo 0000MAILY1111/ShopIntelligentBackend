@@ -26,6 +26,9 @@ export class CategoriesService {
     };
     if (products === "true") {
       options.relations = {products:true}; //if products is true, return the products of the category
+      options.order = { products: {
+        id: 'DESC'      ///para ordenar los datos de los productos , ASC o DEC , por su clasificacion o numero
+      }}
     }
     const category = await this.categoryRepository.findOne(options)
     if (!category) {
