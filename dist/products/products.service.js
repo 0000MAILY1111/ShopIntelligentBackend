@@ -94,7 +94,7 @@ let ProductsService = class ProductsService {
     async remove(id) {
         const product = await this.findOne(id);
         await this.productRepository.remove(product);
-        return "Producto eliminado";
+        return { messaage: "Producto Eliminado" };
     }
 };
 exports.ProductsService = ProductsService;

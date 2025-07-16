@@ -88,7 +88,7 @@ export class ProductsService {
     const product = await this.findOne(id)
     await this.productRepository.remove(product)
     // await this.productRepository.delete(id)
-    return "Producto eliminado";
+    return {messaage : "Producto Eliminado"};
   }
 }
 
