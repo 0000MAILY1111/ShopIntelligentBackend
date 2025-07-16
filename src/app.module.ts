@@ -9,6 +9,7 @@ import { ProductsModule } from './products/products.module';
 import { TransactionsModule } from './transactions/transactions.module';
 import { CuponsModule } from './cupons/cupons.module';
 import { SeederModule } from './seeder/seeder.module';
+import { UploadImageModule } from './upload-image/upload-image.module';
 
 @Module({
   imports: [
@@ -24,7 +25,8 @@ import { SeederModule } from './seeder/seeder.module';
     CategoriesModule,
     ProductsModule,
     TransactionsModule,
-    CuponsModule,   ///seeder module deleted from the imports array as it is not used in the current context
+    CuponsModule,
+    UploadImageModule,   ///seeder module deleted from the imports array as it is not used in the current context
     
     ],
   controllers: [AppController],
